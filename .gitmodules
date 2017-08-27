@@ -1,0 +1,6 @@
+[submodule "analyzer"]
+	path = analyzer
+	url = git@github.com:verum-visu-toolkit/analyzer.git
+[submodule "sptfile"]
+	path = sptfile
+	url = git@github.com:verum-visu-toolkit/sptfile.git
