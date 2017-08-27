@@ -40,3 +40,58 @@ The Visualizer is actually two applications:
 
 
 > (8.26.17) Everything is at an extremely early stage!
+
+<!--
+verum-visu.git
+    submodule: analyzer.git; package: vvanalyzer
+    submodule: renderer.git; package: vvrenderer
+    submodule: sptfile.git; package: vvsptfile
+    submodule: frsfile.git; package: vvfrsfile
+    submodule: rndfile.git; package: vvrndfile
+
+TODO: publish:
+vvanalyzer, vvrenderer, vvsptfile, vvfmsfile, vvrndfile
+(the tools and Visualizer parts should reference the appropriate file formats
+directly)
+TODO: create, vvfmsfile, vvrndfile, and vvrenderer!
+use MoviePy!
+http://zulko.github.io/blog/2014/11/29/data-animations-with-python-and-moviepy/
+
+use one make_frame function that generates image (numpy array)
+for the image, draw the shapes using skimage? find how to use arrays and color
+http://scikit-image.org/docs/dev/api/skimage.draw.html
+
+OR: if it's not slower, draw svg shapes and rasterize each frame
+
+set fps in export from MoviePy to be the speed of the analyzer
+
+[{'type':'circle', 'args': ['var1', 'var2', 5], 'color': 'var3'}]
+
+def render(config=None):
+
+    video_width = config['width']
+    video_height = config['height']
+    def make_frame(t):
+        img = np.zeros((video_width, video_height), dtype=np.uint8)
+
+        for shape in shapes:
+            args = [calc_shape_prop(arg, t) for arg in shape['args']]
+            xx, yy = skimage.draw[shape['type']](args)
+            img[xx, yy] = calc_shape_prop(shape['color'], t)
+
+        return img
+
+# frames: e.g. [[{ 'var1': 3.23, 'var2': '23423.33', 'var3': 323 }], ...]
+def calc_shape_prop(prop_name, t):
+    # if prop_name isn't a string, return it - it's constant
+    # else, return frames[t][prop_name]
+
+
+TODO: create a demo Transformer (not template yet) in python
+(as separate repos)
+the transformer should use the new vvanalyzer.read_output_file
+
+
+in /verum-visu repo, also write more about the ideas of the project -
+the repo will pretty much be the project home page (in the OSS community)
+-->
