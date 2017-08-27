@@ -1,12 +1,12 @@
 # verum visu toolkit
 
-The **verum visu Audio Visualization Toolkit** is a response to the idea
-that an open-source community can develop rich audio visualizations if
-the software is split up into a clearly defined, accessible process.
+**verum visu** (Latin for *true to see*) is a project applying modular design
+to the process of audio visualization, allowing for fully customizable, rich
+visualizations that can utilize multiple languages or applications.
 
-The toolkit consists of three parts:
+The **verum visu Toolkit** defines audio visualization as a process using three pieces of software:
 
-1. *Spectral Analyzer*
+1. *Spectral Analyzer*\
     analyzes audio for frequency data
 
 2. **Visualizer**
@@ -14,21 +14,29 @@ The toolkit consists of three parts:
 3. *Video Renderer*\
     creates a video file by the frames
 
-The *Spectral Analyzer* and *Video Renderer* are the only tools in the
-toolkit. The Visualizer will do the bulk of the work in any process.
-The tools (along with the [libraries](todo)), allow for the development
-of specialized Visualizer parts.
+The *Spectral Analyzer* and *Video Renderer* are the tools in the
+toolkit. The Visualizer is a step created by *you* or someone else in the
+**verum visu community**, and that is what actually defines the relationship between
+the audio and the visuals. The Visualizer could be written in any language&mdash;it
+just needs to be able to read and write JSON files.
+
+<!-- for now (8.26.17), if it's written in Python, you can use vv's file format libs -->
+
+This toolkit exists so that you can experiment with audio visualization without
+paying any attention to the technical aspects of spectral analysis and pixel rendering.
+It allows you to streamline the process of visualization since you only need to create a
+Visualizer, which defines everything about your visualization.
 
 ### Visualizer
-The interpreter consists of two parts, and these are types of programs
-created by the Verum Visu community.
+The Visualizer is actually two applications:
 
 1. **Interpreter**\
-    algorithms/neural networks create visualization data from the
-    frequency data as input
+    creates visualization data from the frequency data as input (using algorithms
+    /neural networks)
 
 2. **Director**\
-    maps the visualization data to properties of shapes for the renderer
-    to animate
+    configures how visualization data should be mapped to properties of shapes for the
+    renderer to animate
 
-Everything is at an extremely early stage!
+
+> (8.26.17) Everything is at an extremely early stage!
