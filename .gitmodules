@@ -4,3 +4,6 @@
 [submodule "sptfile"]
 	path = sptfile
 	url = git@github.com:verum-visu-toolkit/sptfile.git
+[submodule "renderer"]
+	path = renderer
+	url = git@github.com:verum-visu-toolkit/renderer.git
