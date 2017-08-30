@@ -61,9 +61,12 @@ verum-visu.git
 TODO: publish the packages
 (the tools and Visualizer parts should reference the appropriate file formats
 directly)
-TODO: create vvfmsfile and impl it in vvrenderer
+TODO: create vvfmsfile (binary format for fms)
+TODO: create vvrndfile (binary format for rnd) and impl it in vvrenderer
 
 TODO: put my personal visualizer process in a public repo
+
+TODO? analyzer: add volume (in dB) of chunk to each analysis frame
 
 
 in this file, also write more about the ideas of the project -
