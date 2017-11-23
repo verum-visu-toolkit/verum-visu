@@ -7,6 +7,6 @@
 [submodule "renderer"]
 	path = renderer
 	url = git@github.com:verum-visu-toolkit/renderer.git
-[submodule "fmsfile"]
-	path = fmsfile
-	url = git@github.com:verum-visu-toolkit/fmsfile.git
+[submodule "basicfile"]
+	path = basicfile
+	url = git@github.com:verum-visu-toolkit/basicfile.git
